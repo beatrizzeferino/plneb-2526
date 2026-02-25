@@ -1,6 +1,6 @@
 # TPC2
 
-Este trabalho de casa consistiu na utilização expressões regulares utilizando o módulo re.
+Este trabalho de casa consistiu na utilização de expressões regulares utilizando o módulo re.
 
 Foram exploradas diferentes funções, nomeadamente:
 
