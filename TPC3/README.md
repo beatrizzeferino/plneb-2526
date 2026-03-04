@@ -10,25 +10,29 @@ Incialmente foi analisado o ficheiro texto para entender o padrão de formataç�
 ### Passo 1: Remoção das quebras de página
 Foram removidas todas as quebras de página do ficheiro através da expressão 
 
-**re.sub(r'\f', '', texto)**.
+                **re.sub(r'\f', '', texto)**.
 
 ### Passo 2: Remoção das quebras de linhas nas descrições
 Notou-se que algumas descrições se encontravam divididas com quebras de linha. Assim, foi utilizada a expressão 
 
-**re.sub(r'\n([a-zà-ú])', r' \1', texto)** 
+                **re.sub(r'\n([a-zà-ú])', r' \1', texto)** 
+
 para as unir.
+
 A expressão procura um quebra de linha seguida de uma letra minúscula e, quando encontra, substitui a quebra de linha por um espaço. Esta expressão funciona pois as descrições iniciam-se com uma letra maiúscula, logo não serão apanhadas pela expressão e os termos começam com letra minúscula mas são antecedidos por \n\n, não sendp também estes apanhamos pela expressão.
 
 ### Passo 3: Remoção de linhas vazias
 Foram removidas linhas vazias que pudessem existir através da expressão 
 
-**re.sub(r'\n\s*\n', '\n', texto)**
+                **re.sub(r'\n\s*\n', '\n', texto)**
+
 para evitar que estas possam alterar a separação dos termos.
 
 ### Passo 4: Marcação dos termos com @
 De modo a ser possível distinguir os termos das descrições, foi inserido o símbolo @ antes de todos os termos através da expressão 
 
-**re.sub(r'\n([^A-Z\n]+)\n([A-ZÀ-Ú])', r'\n\n@\1\n\2', '\n' + texto)**
+                **re.sub(r'\n([^A-Z\n]+)\n([A-ZÀ-Ú])', r'\n\n@\1\n\2', '\n' + texto)**
+                
 A expressão procura um quebra de linha seguida de algo que não seja uma maiúscula ou quebra de linha seguida de uma quebra de linha e uma maiúscula e, quando encontra, coloca um @ antes do termo. Esta expressão funciona pois, na primeira parte, não permite maiúsculas para evitar apanhas as descrições e, na segunda parte, obriga a ter uma maiúscula para confirmar que o termo vem seguido de uma descrição.
 
 ## Dificuldades
