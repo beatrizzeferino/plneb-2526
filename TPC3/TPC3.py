@@ -22,15 +22,12 @@ conceitos_dict = {}
 
 for conceito in conceitos[1:]:
     conteudo_conceito = conceito.strip()
-    if conteudo_conceito:
-        # Partimos na primeira quebra de linha (Termo vs Descrição)
-        partes = conteudo_conceito.split('\n', 1)
+    partes = conteudo_conceito.split('\n', 1)
         
-        if len(partes) == 2:
-            designacao = partes[0].strip()
-            # Limpamos a descrição para ser uma linha única
-            descricao = partes[1].replace('\n', ' ').strip()
-            conceitos_dict[designacao] = descricao
+    if len(partes) == 2:
+        designacao = partes[0].strip()
+        descricao = partes[1].replace('\n', ' ').strip()
+        conceitos_dict[designacao] = descricao
 
 # Criação do ficheiro JSON
 def escreve_json(dict, filename):
