@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Tracker</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header class="glass-sidebar">
+    <div class="sidebar-header">
+        <h1><i>Reading Tracker</i></h1>
+    </div>
+    <nav class="sidebar-nav">
+        <a href="#Início" class="btn-sidebar"><i class="fas fa-home"></i> Início</a>
+        <a href="#suspense" class="btn-sidebar"><i class="fa fa-search"></i> Suspense</a>
+        <a href="#fantasia" class="btn-sidebar"><i class="fas fa-magic"></i> Fantasia</a>
+        <a href="#romance" class="btn-sidebar"><i class="fas fa-heart"></i> Romance</a>
+        <a href="#wishlist" class="btn-sidebar"><i class="fa fa-bookmark"></i> Wishlist</a>
+    </nav>
+</header>
+
+<div class="conteudo-principal">
+        
+        <section class="intro" id="Início">
+            <h2> Sobre esta página</h2>
+            <div class="cat-info">
+            <p><i class="fas fa-info-circle"></i> Esta página é uma pequena biblioteca pessoal onde organizo os meus livros favoritos e metas de leitura.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3>Género Favorito</h3>
+                    <p class="small-text">Romance</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Livro Favorito</h3>
+                    <p class="small-text">Uma Pequena Vida</p>
+                </div>
+            </div>
+            
+
+            <div class="circle-stats">
+                <div class="circle" style="--value:68; --color:#4caf50;"><span>68%</span><p>Livros lidos</p></div>
+                <div class="circle" style="--value:18; --color:#ffb400;"><span>18%</span><p>Livros 5 ★</p></div>
+                <div class="circle" style="--value:80; --color:#553b08;"><span>4.0</span><p><i>Rating</i> médio</p></div>
+            </div>
+
+
+            <div class="reading-goal-container">
+                <div class="goal-header">
+                    <h3>Meta de Leitura Mensal</h3>
+                    <span class="goal-percentage">66%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 66%;"></div>
+                </div>
+                <p class="goal-status">2 de 3 livros lidos este mês</p>
+            </div>
+        </section>
+
+        <section class="category" id="suspense">
+            <h2>Suspense</h2>
+            <div class="cat-info">
+                <p><i class="fa fa-search"></i> Mistérios viciantes e reviravoltas inesperadas que prendem a atenção.</p>
+                <span class="cat-badge">2 Livros Registados</span>
+                <span class="cat-badge">Média: 3.75 ★</span>
+            </div>
+            <div class="container">
+                <div class="book lido">
+                    <a href="#book6" class="book-link">
+                        <img src="imagens/criada.jpg" alt="">
+                        <div class="book-info">
+                            <div class="title">A criada</div>
+                            <div class="author">Freida McFadden</div>
+                            <div class="rating">★★★★</div>
+                            <div class="tags"><span>Lido</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="book lido">
+                    <a href="#book8" class="book-link">
+                        <img src="imagens/as.jpg" alt="">
+                        <div class="book-info">
+                            <div class="title">Ás de espadas</div>
+                            <div class="author">Faridah Àbike-Íymídé</div>
+                            <div class="rating">★★★⯨</div>
+                            <div class="tags"><span>Lido</span></div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="category" id="fantasia">
+            <h2>Fantasia</h2>
+            <div class="cat-info">
+                <p><i class="fas fa-magic"></i> Exploração de novos mundos, magia e aventuras épicas inesquecíveis.</p>
+                <span class="cat-badge">5 Livros Registados</span>
+                <span class="cat-badge">Média: 3.7 ★</span>
+            </div>
+            <div class="container">
+                <div class="book lido">
+                    <a href="#book2" class="book-link">
+                        <img src="imagens/biblioteca.jpg" alt="">
+                        <div class="book-info">
+                            <div class="title">A Biblioteca da Meia-Noite</div>
+                            <div class="author">Matt Haig</div>
+                            <div class="rating">★★★★</div>
+                            <div class="tags"><span>Lido</span></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="book lido">
+                    <a href="#book10" class="book-link">
+                        <img src="imagens/pc.jpg" alt="">
+                        <div class="book-info">
+                            <div class="title">O Principe Cruel</div>
+                            <div class="author">Holly Black</div>
+                            <div class="rating">★★★★</div>
+                            <div class="tags"><span>Lido</span></div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="book lido">
+                    <a href="#book11" class="book-link">
+                        <img src="imagens/rp.jpg" alt="">
+                        <div class="book-info">
+                            <div class="title">O Rei Perverso</div>
+                            <div class="author">Holly Black</div>
+                            <div class="rating">★★★★⯨</div>
+                            <div class="tags"><span>Lido</span></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="book lido">
+                    <a href="#book12" class="book-link">
+                        <img src="imagens/rainha.jpg" alt="">
+                        <div class="book-info">
+                            <div class="title">A Rainha de Nada</div>
+                            <div class="author">Holly Black</div>
+                            <div class="rating">★★★</div>
+                            <div class="tags"><span>Lido</span></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="book lido">
+                    <a href="#book4" class="book-link">
+                        <img src="imagens/acotar.jpg" alt="">
+                        <div class="book-info">
+                            <div class="title">Corte de Espinhos e Rosas</div>
+                            <div class="author">Sarah J. Maas</div>
+                            <div class="rating">★★★</div>
+                            <div class="tags"><span>Lido</span></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="category" id="romance">
+            <h2>Romance</h2>
+            <div class="cat-info">
+                <p><i class="fas fa-heart"></i> Histórias emocionantes que exploram as relações e os sentimentos humanos.</p>
+                <span class="cat-badge">6 Livros Registados</span>
+                <span class="cat-badge">Média: 4.5 ★</span>
+            </div>
+            <div class="container">
+                <div class="book lido">
+                    <a href="#book1" class="book-link">
+                        <img src="imagens/verity.jpg" alt="">
+                        <div class="book-info">
+                            <div class="title">Verity</div>
+                            <div class="author">Colleen Hoover</div>
+                            <div class="rating">★★★★★</div>
+                            <div class="tags"><span>Lido</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="book lido">
+                    <a href="#book3" class="book-link">
+                        <img src="imagens/7maridos.jpg" alt="">
+                        <div class="book-info">
+                            <div class="title">Evelyn Hugo</div>
+                            <div class="author">Taylor Jenkins Reid</div>
+                            <div class="rating">★★★★★</div>
+                            <div class="tags"><span>Lido</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="book a-ler">
+                    <a href="#book5" class="book-link">
+                        <img src="imagens/pequenavida.jpg" alt="">
+                        <div class="book-info">
+                            <div class="title">Uma Pequena Vida</div>
+                            <div class="author">Hanya Yanagihara</div>
+                            <div class="tags"><span>A ler</span></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="book lido">
+                    <a href="#book9" class="book-link">
+                        <img src="imagens/porta.jpg" alt="">
+                        <div class="book-info">
+                            <div class="title">Uma Porta Estreita</div>
+                            <div class="author">Joanne Harris</div>
+                            <div class="rating">★★★⯨</div>
+                            <div class="tags"><span>Lido</span></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="book lido">
+                    <a href="#book15" class="book-link">
+                        <img src="imagens/police.jpg" alt="">
+                        <div class="book-info">
+                            <div class="title">My Policeman</div>
+                            <div class="author">Bethan Roberts</div>
+                            <div class="rating">★★★★⯨</div>
+                            <div class="tags"><span>Lido</span></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="book a-ler">
+                    <a href="#book14" class="book-link">
+                        <img src="imagens/vermelho.jpg" alt="">
+                        <div class="book-info">
+                            <div class="title">Vermelho, Branco e Sangue Azul</div>
+                            <div class="author">Casey McQuiston</div>
+                            <div class="tags"><span>A ler</span></div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="category" id="wishlist">
+            <h2> Wishlist</h2>
+            <div class="cat-info">
+                <p><i class="fa fa-bookmark"></i></i> Próximas leituras planeadas e livros que quero muito adquirir.</p>
+                <span class="cat-badge">3 Livros na Lista</span>
+            </div>
+            <div class="container">
+                <div class="book quero">
+                    <a href="#book7" class="book-link">
+                        <img src="imagens/451.jpg" alt="">
+                        <div class="book-info">
+                            <div class="title">Fahrenheit 451</div>
+                            <div class="author">Ray Bradbury</div>
+                            <div class="tags">
+                                <span>Quero Ler</span>
+                                <span class="genre">Distopia</span> </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="book quero">
+                    <a href="#book13" class="book-link">
+                        <img src="imagens/jantar.jpg" alt="">
+                        <div class="book-info">
+                            <div class="title">Jantar Secreto</div>
+                            <div class="author">Raphael Montes</div>
+                            <div class="tags"><span>Quero Ler</span>
+                                <span class="genre">Suspense</span></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="book quero">
+                    <a href="#book16" class="book-link">
+                        <img src="imagens/canto.jpg" alt="">
+                        <div class="book-info">
+                            <div class="title">O Canto de Aquiles</div>
+                            <div class="author">Madeline Miller</div>
+                            <div class="tags"><span>Quero Ler</span>
+                                <span class="genre">Romance</span></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+<!-- MODAIS -->
+
+<div id="book1" class="book-page">
+        <div class="book-page-content">
+            <a href="#!" class="close">&times;</a>
+            <h2>Verity</h2>
+            <p><strong>Autor:</strong> Colleen Hoover</p>
+            <p><strong>Rating:</strong> ★★★★★</p>
+            <p><strong>Categoria:</strong> Romance</p>
+            <p><strong>Resumo: </strong>Verity, de Colleen Hoover, acompanha Lowen Ashleigh, uma escritora contratada para terminar a série de livros da famosa autora Verity Crawford após um acidente que a deixou incapaz de escrever. Enquanto analisa os materiais na casa da autora, Lowen encontra um manuscrito secreto com revelações perturbadoras sobre a vida de Verity. À medida que se aproxima do marido dela, começa a questionar o que é verdade e o que pode ser uma mentira perigosa.</p>
+        </div>
+</div>
+
+<div id="book2" class="book-page">
+    <div class="book-page-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>A Biblioteca da Meia-Noite</h2>
+        <p><strong>Autor:</strong> Matt Haig</p>
+        <p><strong>Rating:</strong> ★★★★</p>
+        <p><strong>Categoria:</strong> Fantasia</p>
+        <p><strong>Resumo:</strong> A Biblioteca da Meia-Noite, de Matt Haig, segue Nora Seed, uma mulher que se vê em uma biblioteca entre a vida e a morte. Cada livro nas prateleiras permite que ela experimente versões alternativas de sua vida, baseadas em escolhas que poderia ter feito. Ao explorar essas possibilidades, Nora começa a compreender o valor da própria existência.</p>
+    </div>
+</div>
+
+<div id="book3" class="book-page">
+    <div class="book-page-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>Os Sete Maridos de Evelyn Hugo</h2>
+        <p><strong>Autor:</strong> Taylor Jenkins Reid</p>
+        <p><strong>Rating:</strong> ★★★★★</p>
+        <p><strong>Categoria:</strong> Romance</p>
+        <p><strong>Resumo:</strong> Os Sete Maridos de Evelyn Hugo, de Taylor Jenkins Reid, acompanha a lendária estrela de Hollywood Evelyn Hugo, que decide finalmente contar a verdade sobre sua vida e seus sete casamentos a uma jornalista pouco conhecida, Monique Grant. Ao longo da entrevista, Evelyn revela ambição, amores proibidos e segredos que marcaram sua carreira e sua identidade. Conforme a história avança, fica claro que a escolha de Monique para ouvir essa história não foi por acaso.</p>
+    </div>
+</div>
+
+<div id="book4" class="book-page">
+    <div class="book-page-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>Corte de Espinhos e Rosas</h2>
+        <p><strong>Autor:</strong> Sarah J. Maas</p>
+        <p><strong>Rating:</strong> ★★★</p>
+        <p><strong>Categoria:</strong> Fantasia</p>
+        <p><strong>Resumo:</strong> Corte de Espinhos e Rosas, de Sarah J. Maas, acompanha Feyre, uma jovem caçadora que mata uma criatura mágica na floresta e é levada para o reino dos feéricos como punição. Lá, ela descobre um mundo perigoso e fascinante, onde alianças, magia e sentimentos inesperados podem mudar o destino de todos. Conforme segredos surgem, Feyre percebe que seu captor esconde muito mais do que aparenta.</p>
+    </div>
+</div>
+
+<div id="book5" class="book-page">
+    <div class="book-page-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>Uma Pequena Vida</h2>
+        <p><strong>Autor:</strong>Hanya Yanagihara</p>
+        <p><strong>Categoria:</strong> Romance</p>
+        <p><strong>Resumo:</strong> Uma Pequena Vida, de Hanya Yanagihara, acompanha a amizade de quatro colegas que tentam construir suas vidas em Nova York. No centro da narrativa está Jude, um homem brilhante e reservado que carrega um passado traumático e doloroso. À medida que os anos passam, a história explora amizade, sofrimento e os limites do amor e da resistência.</p>
+    </div>
+</div>
+
+<div id="book6" class="book-page">
+    <div class="book-page-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>A criada</h2>
+        <p><strong>Autor:</strong> Freida McFadden</p>
+        <p><strong>Rating:</strong> ★★★★</p>
+        <p><strong>Categoria:</strong> Thriller</p>
+        <p><strong>Resumo:</strong> A Criada, de Freida McFadden, acompanha uma mulher que aceita trabalhar como empregada doméstica na casa de uma família rica. Embora pareça uma oportunidade perfeita para recomeçar, a casa esconde comportamentos estranhos e segredos perturbadores. Conforme o tempo passa, ela percebe que talvez esteja presa em uma situação muito mais perigosa do que imaginava.</p>
+    </div>
+</div>
+
+<div id="book7" class="book-page">
+    <div class="book-page-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>Fahrenheit 451</h2>
+        <p><strong>Autor:</strong> Ray Bradbury</p>
+        <p><strong>Categoria:</strong> Romance Distópico</p>
+        <p><strong>Resumo:</strong> Fahrenheit 451, de Ray Bradbury, apresenta um futuro distópico onde os livros são proibidos e bombeiros têm a missão de queimá-los. Guy Montag, um desses bombeiros, começa a questionar o sistema após conhecer uma jovem que desperta sua curiosidade pelo conhecimento. Ao desafiar as regras, ele descobre o verdadeiro poder das ideias.</p>
+    </div>
+</div>
+
+<div id="book8" class="book-page">
+    <div class="book-page-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>Ás de Espadas</h2>
+        <p><strong>Autor:</strong> Faridah Àbike-Íymídé</p>
+        <p><strong>Rating:</strong> ★★★⯨</p>
+        <p><strong>Categoria:</strong> Suspense, ficção juvenil</p>
+        <p><strong>Resumo:</strong> Ás de Espadas, de Faridah Àbíké-Íyímídé, acompanha dois estudantes negros em uma prestigiada escola britânica que se tornam alvo de um jogo cruel de mensagens anônimas. As revelações expõem segredos e preconceitos dentro da instituição. Conforme a tensão aumenta, eles precisam descobrir quem está por trás das ameaças antes que seja tarde demais.</p>
+    </div>
+</div>
+
+
+<div id="book9" class="book-page">
+    <div class="book-page-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>Uma Porta Estreita</h2>
+        <p><strong>Autor:</strong> Joanne Harris</p>
+        <p><strong>Rating:</strong> ★★★★</p>
+        <p><strong>Categoria:</strong> Romance, suspense</p>
+        <p><strong>Resumo:</strong> Uma Porta Estreita, de Joanne Harris, acompanha a história de um internato britânico onde um novo diretor retorna anos depois de ter sido aluno. A convivência no colégio revela rivalidades antigas, segredos e tensões escondidas. Aos poucos, o passado volta à tona e ameaça destruir a reputação de todos envolvidos.</p>
+    </div>
+</div>
+
+
+<div id="book10" class="book-page">
+    <div class="book-page-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>O Principe Cruel</h2>
+        <p><strong>Autor:</strong> Holly Black</p>
+        <p><strong>Rating:</strong> ★★★★</p>
+        <p><strong>Categoria:</strong> Fantasia</p>
+        <p><strong>Resumo:</strong> O Príncipe Cruel, de Holly Black, segue Jude, uma jovem humana criada no perigoso reino das fadas. Determinada a conquistar poder em um mundo que a despreza por ser mortal, ela enfrenta intrigas políticas e manipulações na corte. No centro desse jogo está o cruel príncipe Cardan, com quem Jude mantém uma relação intensa e perigosa.</p>
+    </div>
+</div>
+
+<div id="book11" class="book-page">
+    <div class="book-page-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>O Rei Perverso</h2>
+        <p><strong>Autor:</strong> Holly Black</p>
+        <p><strong>Rating:</strong>★★★★★</p>
+        <p><strong>Categoria:</strong> Fantasia</p>
+        <p><strong>Resumo:</strong> O Rei Perverso, de Holly Black, continua a história de Jude após conquistar uma posição de poder na corte das fadas. Enquanto tenta controlar o reino através do rei Cardan, ela precisa lidar com conspirações, traições e inimigos ocultos. Cada decisão pode colocar em risco sua vida e seu domínio.</p>
+    </div>
+</div>
+
+
+<div id="book12" class="book-page">
+    <div class="book-page-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>A Rainha de Nada</h2>
+        <p><strong>Autor:</strong> Holly Black</p>
+        <p><strong>Rating:</strong> ★★★</p>
+        <p><strong>Categoria:</strong> Fantasia</p>
+        <p><strong>Resumo:</strong> A Rainha de Nada, de Holly Black, conclui a trilogia do Povo do Ar. Exilada do reino das fadas, Jude precisa encontrar uma forma de recuperar seu lugar e proteger aqueles que ama. Entre alianças frágeis e batalhas políticas, ela enfrentará seu destino final.</p>
+    </div>
+</div>
+
+<div id="book13" class="book-page">
+    <div class="book-page-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>Jantar Secreto</h2>
+        <p><strong>Autor:</strong> Raphael Montes</p>
+        <p><strong>Categoria:</strong> Suspense</p>
+        <p><strong>Resumo:</strong> Jantar Secreto, de Raphael Montes, acompanha quatro amigos que se mudam para o Rio de Janeiro em busca de sucesso. Afundados em dívidas, eles começam a organizar jantares clandestinos para clientes ricos com um ingrediente secreto e chocante. O negócio cresce, mas logo foge completamente do controle.</p>
+    </div>
+</div>
+
+<div id="book14" class="book-page">
+    <div class="book-page-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>Vermelho, Branco e Sangue Azul</h2>
+        <p><strong>Autor:</strong> Casey McQuiston</p>
+        <p><strong>Categoria:</strong> Romance</p>
+        <p><strong>Resumo:</strong> Vermelho, Branco e Sangue Azul, de Casey McQuiston, acompanha Alex Claremont-Diaz, filho da presidente dos Estados Unidos, que mantém uma rivalidade pública com o príncipe Henry, da família real britânica. Após um incidente diplomático, os dois são obrigados a fingir amizade para evitar um escândalo internacional. Porém, a convivência acaba se transformando em algo muito mais profundo, colocando em risco suas imagens públicas e o cenário político.</p>
+    </div>
+</div>
+
+<div id="book15" class="book-page">
+    <div class="book-page-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>My Policeman</h2>
+        <p><strong>Autor:</strong> Bethan Roberts</p>
+        <p><strong>Categoria:</strong> Romance</p>
+        <p><strong>Resumo:</strong> My Policeman, de Bethan Roberts, acompanha a história de Tom, um policia na Inglaterra dos anos 1950, que vive um casamento aparentemente estável com Marion. No entanto, ele mantém um relacionamento secreto com Patrick, em uma época em que a homossexualidade era criminalizada. O triângulo entre os três revela sentimentos profundos, segredos e as consequências dolorosas das escolhas feitas em uma sociedade repressiva.</p>
+    </div>
+</div>
+
+<div id="book16" class="book-page">
+    <div class="book-page-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>O Canto de Aquiles</h2>
+        <p><strong>Autor:</strong> Madeline Miller</p>
+        <p><strong>Categoria:</strong> Romance</p>
+        <p><strong>Resumo:</strong> O Canto de Aquiles, de Madeline Miller, reconta o mito grego através da história de Pátroclo, um jovem exilado que se torna companheiro do lendário guerreiro Aquiles. Entre amizade, amor e treinamento para a guerra, os dois crescem juntos enquanto o destino os conduz para o conflito da Guerra de Troia. A narrativa mistura romance, tragédia e heroísmo em uma história marcada pelo destino.</p>
+    </div>
+</div>
+
+</body>
+</html>
