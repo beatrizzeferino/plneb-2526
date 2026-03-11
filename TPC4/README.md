@@ -17,4 +17,4 @@ A página contém:
 
 - Navegação Lateral: Sidebar fixa com âncoras internas para permitir que o utilizador salte rapidamente para o género que deseja consultar.
 
-- Secções de Conteúdo: Uso de tags <section> e <div> para separar claramente cada categoria literária.
+- Secções de Conteúdo: Uso de tags `<section>` e `<div>` para separar claramente cada categoria literária.
