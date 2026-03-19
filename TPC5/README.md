@@ -11,7 +11,7 @@ Inicialmente, foi analisada a estrutura HTML do site para identificar os padrõe
 
 ## Passo a passo de resolução
 
-### Passo 1: Geração dinâmica de URLs
+### Passo 1: Geração dos URLs
 Para percorrer todo o site sem introduzir manualmente cada endereço, iterou-se sobre o alfabeto e geraram-se os pedidos para as páginas de índice:
 
             html_indice = requests.get(f"{base_url}/doencasAaZ/{letra}").text
