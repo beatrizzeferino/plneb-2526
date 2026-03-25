@@ -8,7 +8,7 @@ Para realizar esta tarefa, foi utilizada a biblioteca spaCy, mais especificament
 
 ## Passo a passo de resolução
 
-### Passo 1: Carregamento e preparação do texto
+### Passo 1: Preparação do texto
 
 O ficheiro de texto foi lido e, após a leitura, foi removida a parte inicial (primeiros 2663 caracteres) do documento que não fazia parte da narrativa principal.
 
