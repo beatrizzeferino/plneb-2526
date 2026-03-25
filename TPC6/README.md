@@ -12,9 +12,7 @@ Para realizar esta tarefa, foi utilizada a biblioteca spaCy, mais especificament
 
 O ficheiro de texto foi lido e, após a leitura, foi removida a parte inicial (primeiros 2663 caracteres) do documento que não fazia parte da narrativa principal.
 
-O texto resultante foi depois processado pelo modelo de linguagem do spaCy:
-
-    doc = nlp(texto_limpo)
+O texto resultante foi depois processado pelo modelo de linguagem do spaCy
 
 ### Passo 2: Identificação das personagens
 
