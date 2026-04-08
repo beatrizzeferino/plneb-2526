@@ -1,4 +1,4 @@
-# TPC - Dicionário Médico
+# TPC7 
 
 Este trabalho consistiu no desenvolvimento da homepage de uma aplicação web de um **Dicionário Médico**, utilizando Flask (Python), HTML e Bootstrap 5. 
 
