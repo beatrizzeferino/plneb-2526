@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <title>Dicionário Médico</title>
+    <style>
+        .container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="card text-center" style="width: 36rem;">
+        <div class="card-body">
+            <h5 class="card-title">Dicionário Médico</h5>
+            <p class="card-text">Pesquise o conceito médico que pretende ou visualize todos os conceitos disponíveis.</p>
+            
+            <a href="/conceitos" class="btn btn-primary mb-3">Lista de conceitos</a>
+            
+            <!-- FORMULÁRIO DE PESQUISA -->
+            <form method="POST" action="/">
+                <div class="input-group mb-3">
+                    <input 
+                        type="text" 
+                        name="inputPesquisa"
+                        class="form-control" 
+                        placeholder="Insira o conceito" 
+                        required
+                    >
+                    <button class="btn btn-primary" type="submit">Pesquisar</button>
+                </div>
+            </form>
+            
+            <!-- MENSAGEM DE ERRO (só aparece se houver erro) -->
+            {% if erro %}
+            <div class="alert alert-warning" role="alert">
+                O termo <strong>{{ termo_errado }}</strong> não existe no dicionário.
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
