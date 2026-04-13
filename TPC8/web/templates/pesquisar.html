@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <title> Pesquisa de Conceitos </title>
+
+{% endblock %}
+
+
+{% block body %}
+
+    <h1> Pesquisar conceito </h1>
+
+
+    <form action="/pesquisar" method="POST">
+    <div class="mb-3">
+        <label for="palavra" class="form-label">Query de Pesquisar</label>
+        <input type="text" class="form-control" id="palavra" name="palavra">
+    </div> <br>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="word-boundary" name="word-boundary">
+        <label class="form-check-label" for="flexCheckDefault">
+        Word Boundary
+        </label>
+    </div> <br>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="case-sensitive" name="case-sensitive">
+        <label class="form-check-label" for="flexCheckDefault">
+        Case Sensitive
+        </label>
+    </div> <br>
+    <button type="submit" class="btn btn-primary">Pesquisar</button>
+    </form>
+
+
+    {% for c in conceitos %}
+    <h3>{{ c.designacao}}</h3>
+    <p>{{ c.descricao}}</p>
+    <hr>
+{% endfor %}
+
+{% endblock %}
