@@ -4,7 +4,7 @@ import re
 
 app=Flask(__name__)
 
-fd_b=open("../../Aula_3/dicionario_medico.json", "r", encoding="utf-8")
+fd_b=open("dicionario_medico.json", "r", encoding="utf-8")
 db=json.load(fd_b)
 
 
@@ -37,7 +37,7 @@ def tabela():
 def pesquisar():
     return render_template("pesquisar.html", conceitos=db)
     
-@app.post("/pesquisar")  
+'''@app.post("/pesquisar")  
 def pesquisar_conceitos():
     palavra=request.form['palavra']
     wb = request.form.get('word_boundary')
@@ -60,18 +60,56 @@ def pesquisar_conceitos():
         if match_designacao or match_descricao:
             if cs:
                 res = {
-                    'designacao': re.sub(f"({pattern})", r"<mark>\1</mark>", designacao),
-                    'descricao': re.sub(f"({pattern})", r"<mark>\1</mark>", descricao)
+                    'designacao': re.sub(f"({pattern})", r"<mark><strong>\1</strong></mark>", designacao),
+                    'descricao': re.sub(f"({pattern})", r"<strong>\1</strong>", descricao)
                 }
             else:
                 res = {
-                    'designacao': re.sub(f"({pattern})", r"<mark>\1</mark>", designacao, flags=re.IGNORECASE),
-                    'descricao': re.sub(f"({pattern})", r"<mark>\1</mark>", descricao, flags=re.IGNORECASE)
+                    'designacao': re.sub(f"({pattern})", r"<strong>\1</strong>", designacao, flags=re.IGNORECASE),
+                    'descricao': re.sub(f"({pattern})", r"<strong>\1</strong>", descricao, flags=re.IGNORECASE)
                 }
             resultados.append(res)
     
     print(f"Palavra pesquisada: {palavra}, Resultados: {len(resultados)}")
 
+    return render_template("pesquisar.html", conceitos=resultados)'''
+
+
+@app.post("/pesquisar")  
+def pesquisar_conceitos():
+    palavra=request.form['palavra']
+    wb = request.form.get('word-boundary')  # Corrigido para word-boundary
+    cs = request.form.get('case-sensitive')  # Corrigido para case-sensitive
+    
+    # Construir o pattern corretamente
+    pattern = rf"\b{palavra}\b" if wb else palavra
+ 
+    resultados = []
+    for designacao, descricao in db.items():
+        if cs:
+            # Case-sensitive - não usa flags
+            match_designacao = re.search(pattern, designacao)
+            match_descricao = re.search(pattern, descricao)
+        else:
+            # Case-insensitive - usa re.IGNORECASE
+            match_designacao = re.search(pattern, designacao, re.IGNORECASE)
+            match_descricao = re.search(pattern, descricao, re.IGNORECASE)
+        
+        if match_designacao or match_descricao:
+            if cs:
+                res = {
+                    'designacao': re.sub(f"({pattern})", r"<mark><strong>\1</strong></mark>", designacao),
+                    'descricao': re.sub(f"({pattern})", r"<mark><strong>\1</strong></mark>", descricao)
+                }
+            else:
+                res = {
+                    'designacao': re.sub(f"({pattern})", r"<mark><strong>\1</strong></mark>", designacao, flags=re.IGNORECASE),
+                    'descricao': re.sub(f"({pattern})", r"<mark><strong>\1</strong></mark>", descricao, flags=re.IGNORECASE)
+                }
+            resultados.append(res)
+    
+    print(f"Palavra pesquisada: {palavra}, Resultados: {len(resultados)}")
+ 
     return render_template("pesquisar.html", conceitos=resultados)
 
 @app.post("/conceitos")
