@@ -10,9 +10,11 @@ A página de pesquisar (`pesquisarhtml`) contém:
 
 - **Checkboxes combináveis**: que permitem alterar as configurações da pesquisa
     - **Word Boundary**: quando ativa torna a pesquisa limitada à palavra, isto é, apenas mostra resultados cuja pesquisa se encontre isolada por espaços das restantes palavras, não apresentado resultados dentro de uma palavra. 
+
     Por exemplo, com a checkbox desativada, se for pesquisado 'teste' são apresentados resultados como 'Papanicolaou, teste de' e 'anacatestesia', caso esteja ativa apenas aparece 'Papanicolaou, teste de'.  
 
     - **Case sensitive**: quando ativa torna a pesquisa sensível a maiúsculas e minúsculas , isto é, apresenta todos os resultados independentemente das letras estarem como maiúsculas ou minúsculas.
+    
     Por exemplo, com a checkbox desativada, se for pesquisado 'adn' são apresentados resultados como 'ADN' e 'adnato', caso esteja ativa apenas aparece 'adnato'.
 
 ## Resultados
