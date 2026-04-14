@@ -33,6 +33,7 @@
 
     {% if conceitos %}
         {% for c in conceitos %}
+        <!-- Necessário o |safe para permitir o uso das tags no template do jinja, caso contrário aparecem escritas as tags de forma literal-->
         <h3>{{ c.designacao|safe }}</h3>
         <p>{{ c.descricao|safe }}</p>
         <hr>

@@ -37,52 +37,14 @@ def tabela():
 def pesquisar():
     return render_template("pesquisar.html", conceitos=db)
     
-'''@app.post("/pesquisar")  
-def pesquisar_conceitos():
-    palavra=request.form['palavra']
-    wb = request.form.get('word_boundary')
-    cs = request.form.get('case_sensitive')
-
-    pattern = (r"\b{palavra}\b") if wb else palavra
-
-    resultados = []
-    for designacao, descricao in db.items():
-        # Se case-sensitive NÃO está ativo, usa re.IGNORECASE
-        if cs:
-            # Case-sensitive - não usa flags
-            match_designacao = re.search(pattern, designacao)
-            match_descricao = re.search(pattern, descricao)
-        else:
-            # Case-insensitive - usa re.IGNORECASE
-            match_designacao = re.search(pattern, designacao, re.IGNORECASE)
-            match_descricao = re.search(pattern, descricao, re.IGNORECASE)
-        
-        if match_designacao or match_descricao:
-            if cs:
-                res = {
-                    'designacao': re.sub(f"({pattern})", r"<mark><strong>\1</strong></mark>", designacao),
-                    'descricao': re.sub(f"({pattern})", r"<strong>\1</strong>", descricao)
-                }
-            else:
-                res = {
-                    'designacao': re.sub(f"({pattern})", r"<strong>\1</strong>", designacao, flags=re.IGNORECASE),
-                    'descricao': re.sub(f"({pattern})", r"<strong>\1</strong>", descricao, flags=re.IGNORECASE)
-                }
-            resultados.append(res)
-    
-    print(f"Palavra pesquisada: {palavra}, Resultados: {len(resultados)}")
-
-    return render_template("pesquisar.html", conceitos=resultados)'''
-
 
 @app.post("/pesquisar")  
 def pesquisar_conceitos():
     palavra=request.form['palavra']
-    wb = request.form.get('word-boundary')  # Corrigido para word-boundary
-    cs = request.form.get('case-sensitive')  # Corrigido para case-sensitive
+    wb = request.form.get('word-boundary')
+    cs = request.form.get('case-sensitive') 
     
-    # Construir o pattern corretamente
-    pattern = rf"\b{palavra}\b" if wb else palavra
+    pattern = rf"\b{palavra}\b" if wb else palavra #utilizamos rf para usar raw string para as expressões regex e f string para poder passar a variável
  
     resultados = []
     for designacao, descricao in db.items():
@@ -98,7 +60,7 @@ def pesquisar_conceitos():
         if match_designacao or match_descricao:
             if cs:
                 res = {
-                    'designacao': re.sub(f"({pattern})", r"<mark><strong>\1</strong></mark>", designacao),
+                    'designacao': re.sub(f"({pattern})", r"<mark><strong>\1</strong></mark>", designacao), #mark e bold para destaque do termo na pesquisa
                     'descricao': re.sub(f"({pattern})", r"<mark><strong>\1</strong></mark>", descricao)
                 }
             else:
